@@ -1,0 +1,29 @@
+include _mixin
+doctype html
+html.no-js.loading(dir=lang == 'ar' ? 'rtl' : 'ltr')
+  head
+    title Todo List
+    link(rel="icon", href="favicon.ico", type="image/x-icon")
+    meta(http-equiv='Content-Type', content='text/html;charset=utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
+    meta(name='keywords', content='Todo List, TEST PROJECT')
+    meta(name='description', content="Todo List")
+    meta(property="og:image", content="")
+    meta(property="og:title" content="")
+    meta(property="og:url" content="")
+    meta(property="og:site_name" content="")
+    meta(name="format-detection" content="telephone=no")
+
+    include _styleLinks
+    block stylelinks
+
+    block head
+  body.no-js(dir=lang == 'ar' ? 'rtl' : 'ltr', class=bodyClass)
+    .pre-loader
+      .loader 
+    .main-wrapper
+      include _header
+      block body
+      include _footer
+    include _scriptLinks
+    block foot
